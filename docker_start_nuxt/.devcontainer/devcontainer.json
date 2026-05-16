@@ -1,0 +1,36 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
+{
+  "name": "Existing Docker Compose for Nuxt4",
+  "dockerComposeFile": [
+    "../compose.yaml",
+    "./compose.yaml"
+  ],
+  "service": "nuxt",
+  "workspaceFolder": "/nuxtapp",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Vue.volar",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "oderwat.indent-rainbow",
+        "chrmarti.regex",
+        "eamodio.gitlens"
+      ],
+      "settings": {
+        "editor.tabSize": 2,
+        "editor.formatOnSave": false,
+        "editor.codeActionsOnSave": {
+          "source.fixAll": false
+        },
+        "editor.rulers": [
+          127
+        ],
+        "editor.guides.bracketPairs": true,
+        "files.insertFinalNewline": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      }
+    }
+  }
+}

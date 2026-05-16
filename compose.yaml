@@ -1,0 +1,6 @@
+services:
+  nuxt:
+    build: .
+    volumes:
+        - .:/nuxtapp
+    command: [npx, nuxi@latest, init, nuxtapp, --packageManager=yarn, --no-install, --no-modules, --template=minimal]
