@@ -2,10 +2,7 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
 {
   "name": "Existing Docker Compose for Nuxt4",
-  "dockerComposeFile": [
-    "../compose.yaml",
-    "./compose.yaml"
-  ],
+  "dockerComposeFile": ["../compose.yaml", "./compose.yaml"],
   "service": "nuxt",
   "workspaceFolder": "/nuxtapp",
   "customizations": {
@@ -17,7 +14,8 @@
         "esbenp.prettier-vscode",
         "oderwat.indent-rainbow",
         "chrmarti.regex",
-        "eamodio.gitlens"
+        "eamodio.gitlens",
+        "bradlc.vscode-tailwindcss"
       ],
       "settings": {
         "editor.tabSize": 2,
@@ -25,13 +23,15 @@
         "editor.codeActionsOnSave": {
           "source.fixAll": false
         },
-        "editor.rulers": [
-          127
-        ],
+        "editor.rulers": [127],
         "editor.guides.bracketPairs": true,
         "files.insertFinalNewline": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode"
       }
     }
-  }
+  },
+  "mounts": [
+    "source=${localEnv:USERPROFILE}/.ssh,target=/root/.ssh,type=bind,consistency=cached"
+  ],
+  "postCreateCommand": "chmod 600 /root/.ssh/*"
 }
