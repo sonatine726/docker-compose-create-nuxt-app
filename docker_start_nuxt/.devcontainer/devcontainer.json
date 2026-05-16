@@ -11,6 +11,7 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "Nuxtr.nuxtr-vscode",
         "Vue.volar",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",

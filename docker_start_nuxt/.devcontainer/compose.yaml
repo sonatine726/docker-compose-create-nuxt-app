@@ -1,4 +1,4 @@
 services:
-  vue:
+  nuxt:
     # docker起動時にNuxtが起動しないようにする
     command: [/bin/sh, -c, "while sleep 1000; do :; done"]
